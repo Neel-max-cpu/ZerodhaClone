@@ -13,11 +13,11 @@ const Navbar = () => {
                     <img className='h-4 w-auto' src={img} alt="" />
                 </div>
                 <div className='flex items-center space-x-2'>
-                    <Button className="bg-white text-gray-500 hover:bg-white hover:text-blue-500 shadow-none">Signup</Button>
-                    <Button className="bg-white text-gray-500 hover:bg-white hover:text-blue-500 shadow-none">About</Button>
-                    <Button className="bg-white text-gray-500 hover:bg-white hover:text-blue-500 shadow-none">Products</Button>
-                    <Button className="bg-white text-gray-500 hover:bg-white hover:text-blue-500 shadow-none">Pricing</Button>
-                    <Button className="bg-white text-gray-500 hover:bg-white hover:text-blue-500 shadow-none">Support</Button>
+                    <Button onClick={()=>window.open("https://signup.zerodha.com/","blank")} className="bg-white text-gray-500 hover:bg-white hover:text-blue-500 shadow-none">Signup</Button>
+                    <Button onClick={()=>window.open("https://zerodha.com/about/","blank")} className="bg-white text-gray-500 hover:bg-white hover:text-blue-500 shadow-none">About</Button>
+                    <Button onClick={()=>window.open("https://zerodha.com/products/","blank")} className="bg-white text-gray-500 hover:bg-white hover:text-blue-500 shadow-none">Products</Button>
+                    <Button onClick={()=>window.open("https://zerodha.com/charges/#tab-equities","blank")} className="bg-white text-gray-500 hover:bg-white hover:text-blue-500 shadow-none">Pricing</Button>
+                    <Button onClick={()=>window.open("https://support.zerodha.com/","blank")} className="bg-white text-gray-500 hover:bg-white hover:text-blue-500 shadow-none">Support</Button>
                     <Menu size='24' />
                 </div>
             </div>

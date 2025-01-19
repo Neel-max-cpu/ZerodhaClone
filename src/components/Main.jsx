@@ -27,6 +27,17 @@ import wa from "../assets/icons/whatsapp-brands-solid.svg"
 import te from "../assets/icons/telegram-brands-solid.svg"
 
 
+import x_b from "../assets/icons/twitter_blue.svg"
+import fb_b from "../assets/icons/facebook_blue.svg"
+import ig_b from "../assets/icons/instagram_blue.svg"
+import li_b from "../assets/icons/linkedin_blue.svg"
+import yt_b from "../assets/icons/youtube_blue.svg"
+import wa_b from "../assets/icons/whatsapp_blue.svg"
+import te_b from "../assets/icons/telegram_blue.svg"
+
+
+
+
 
 const Main = () => {
     return (
@@ -46,7 +57,7 @@ const Main = () => {
                     <h1 className='text-5xl text-gray-900 font-semibold'>Invest in everything</h1>
                     <h2 className='text-gray-800'>Online Online platform to invest in stocks, derivatives, mutual funds, ETFs, bonds, and more.</h2>
                 </div>
-                <Button className="px-8 py-4 text-lg bg-[#387ed1] text-white rounded-sm hover:bg-gray-950">
+                <Button onClick={()=>window.open("https://zerodha.com/open-account", "blank")} className="px-8 py-4 text-lg bg-[#387ed1] text-white rounded-sm hover:bg-gray-950">
                     Sign up for free
                 </Button>
             </div>
@@ -79,11 +90,11 @@ const Main = () => {
 
                 {/* Image Section */}
                 <div className='flex-1'>
-                    <img className='h-auto w-full object-contain' src={ecosystem} alt="Ecosystem" />
+                    <img onClick={()=>window.open("https://zerodha.com/products", "blank")} className='hover:cursor-pointer h-auto w-full object-contain' src={ecosystem} alt="Ecosystem" />
                     <div className='flex justify-center items-center space-x-3'>
-                        <Button className="bg-white shadow-none text-blue-500 hover:bg-white hover:text-gray-900">Explore our products <MoveRight /></Button>
+                        <Button onClick={()=>window.location.href="https://zerodha.com/products"} className="bg-white shadow-none text-blue-500 hover:bg-white hover:text-gray-900">Explore our products <MoveRight /></Button>
 
-                        <Button className="bg-white shadow-none text-blue-500 hover:bg-white hover:text-gray-900">Try kit demo <MoveRight /></Button>
+                        <Button onClick={()=>window.location.href="https://kite-demo.zerodha.com/dashboard"} className="bg-white shadow-none text-blue-500 hover:bg-white hover:text-gray-900">Try kit demo <MoveRight /></Button>
                     </div>
                 </div>
             </div>
@@ -100,7 +111,7 @@ const Main = () => {
                     <h3 className='text-gray-700 mt-2'>
                         We pioneered the concept of discount broking and price transparency in India. Flat fees and no hidden charges.
                     </h3>
-                    <Button className="bg-white shadow-none p-0 text-blue-500 hover:bg-white hover:text-gray-900">See pricing <MoveRight /></Button>
+                    <Button onClick={()=>window.open("https://zerodha.com/charges/#tab-equities", "blank")} className="bg-white shadow-none p-0 text-blue-500 hover:bg-white hover:text-gray-900">See pricing <MoveRight /></Button>
                 </div>
 
                 {/* Image Section */}
@@ -129,7 +140,7 @@ const Main = () => {
             <div className='flex flex-row justify-center items-center p-14 space-x-20 my-10'>
                 {/* Image Section */}
                 <div className='flex-1'>
-                    <img className='h-72 w-full object-contain' src={education} alt="Ecosystem" />
+                    <img onClick={()=>window.open("https://zerodha.com/varsity/", "blank")} className='hover:cursor-pointer h-72 w-full object-contain' src={education} alt="Ecosystem" />
                 </div>
 
                 {/* Text Section */}
@@ -140,14 +151,14 @@ const Main = () => {
                         <h3 className='text-gray-600 mt-2'>
                             Varsity, the largest online stock market education book in the world covering everything from the basics to advanced trading.
                         </h3>
-                        <Button className="bg-white shadow-none p-0 text-blue-500 hover:bg-white hover:text-gray-900">Varsity<MoveRight /></Button>
+                        <Button onClick={()=>window.open("https://zerodha.com/varsity/", "blank")} className="bg-white shadow-none p-0 text-blue-500 hover:bg-white hover:text-gray-900">Varsity<MoveRight /></Button>
                     </div>
 
                     <div className='space-y-3'>
                         <h3 className='text-gray-600 mt-2'>
                             TradingQ&A, the most active trading and investment community in India for all your market related queries.
                         </h3>
-                        <Button className="bg-white shadow-none p-0 text-blue-500 hover:bg-white hover:text-gray-900">TradingQ&A<MoveRight /></Button>
+                        <Button onClick={()=>window.open("https://tradingqna.com/", "blank")} className="bg-white shadow-none p-0 text-blue-500 hover:bg-white hover:text-gray-900">TradingQ&A<MoveRight /></Button>
                     </div>
                 </div>
             </div>
@@ -158,7 +169,8 @@ const Main = () => {
                     <h1 className='text-3xl text-gray-700 font-semibold'>Open a Zerodha account</h1>
                     <h2 className='text-gray-500'>Modern platforms and apps, ₹0 investments, and flat ₹20 intraday and F&O trades.</h2>
                 </div>
-                <Button className="px-8 py-4 text-lg bg-[#387ed1] text-white rounded-sm hover:bg-gray-950">
+                {/* or can use --- onClick={()=>window.open("https://zerodha.com/open-account/", "blank")} */}
+                <Button className="px-8 py-4 text-lg bg-[#387ed1] text-white rounded-sm hover:bg-gray-950" onClick={()=>window.location.href="https://zerodha.com/open-account/"}>
                     Sign up for free
                 </Button>
             </div>
@@ -173,17 +185,17 @@ const Main = () => {
                         <p>© 2010 - 2025, Zerodha Broking Ltd. <br />All rights reserved.</p>
                     </div>
                     <div className='space-y-4'>
-                        <div className='flex space-x-4'>
-                            <img className='h-5 w-5 text-gray-500' src={x} alt="" />
-                            <img className='h-5 w-5 text-gray-500' src={fb} alt="" />
-                            <img className='h-5 w-5 text-gray-500' src={ig} alt="" />
-                            <img className='h-5 w-5 text-gray-500' src={li} alt="" />
+                        <div className='flex space-x-4 border-b-2 pb-2'>                            
+                            <a href="https://x.com/zerodhaonline" className='h-5 w-5 group'><img className='h-5 w-5 text-gray-500 group-hover:hidden' src={x} alt="" /> <img src={x_b} className='h-5 w-5 hidden group-hover:block' alt="" /> </a>
+                            <a href="https://www.facebook.com/zerodha.social" className='h-5 w-5 group'><img className='h-5 w-5 group-hover:hidden text-gray-500' src={fb} alt="" /> <img src={fb_b} className='h-5 w-5 hidden group-hover:block' alt="" /> </a>
+                            <a href="https://www.instagram.com/zerodhaonline/" className='h-5 w-5 group'><img className='h-5 w-5 group-hover:hidden text-gray-500' src={ig} alt="" /> <img src={ig_b} className='h-5 w-5 hidden group-hover:block' alt="" /> </a>
+                            <a href="https://www.linkedin.com/company/zerodha/" className='h-5 w-5 group'><img className='h-5 w-5 group-hover:hidden text-gray-500' src={li} alt="" /> <img src={li_b} className='h-5 w-5 hidden group-hover:block' alt="" /> </a>
 
                         </div>
                         <div className='flex space-x-4'>
-                            <img className='h-5 w-5 text-gray-500' src={yt} alt="" />
-                            <img className='h-5 w-5 text-gray-500' src={wa} alt="" />
-                            <img className='h-5 w-5 text-gray-500' src={te} alt="" />
+                            <a href="https://www.youtube.com/@zerodhaonline" className='h-5 w-5 group'><img className='h-5 w-5 group-hover:hidden text-gray-500' src={yt} alt="" /> <img src={yt_b} className='h-5 w-5 hidden group-hover:block' alt="" /> </a>
+                            <a href="https://www.whatsapp.com/channel/0029Va8tzF0EquiIIb9j791g" className='h-5 w-5 group'><img className='h-5 w-5 group-hover:hidden text-gray-500' src={wa} alt="" /> <img src={wa_b} className='h-5 w-5 hidden group-hover:block' alt="" /> </a>
+                            <a href="https://t.me/zerodhain" className='h-5 w-5 group'><img className='h-5 w-5 group-hover:hidden text-gray-500' src={te} alt="" /> <img src={te_b} className='h-5 w-5 hidden group-hover:block' alt="" /> </a>
                         </div>
                     </div>
                 </div>
@@ -192,15 +204,15 @@ const Main = () => {
                 <div className='flex flex-col space-y-2 mt-3'>
                     <h1 className='text-gray-800 font-semibold text-lg'>Company</h1>
                     <div className='flex flex-col hover:text-blue-500'>
-                        <a href='' className='hover:text-blue-500 text-gray-500 font-semibold text-base'>About</a>
-                        <a href='' className='hover:text-blue-500 text-gray-500 font-semibold text-base'>Products</a>
-                        <a href='' className='hover:text-blue-500 text-gray-500 font-semibold text-base'>Pricing</a>
-                        <a href='' className='hover:text-blue-500 text-gray-500 font-semibold text-base'>Referral programme</a>
-                        <a href='' className='hover:text-blue-500 text-gray-500 font-semibold text-base'>Carrers</a>
-                        <a href='' className='hover:text-blue-500 text-gray-500 font-semibold text-base'>Zerodha.tech</a>
-                        <a href='' className='hover:text-blue-500 text-gray-500 font-semibold text-base'>Open source</a>
-                        <a href='' className='hover:text-blue-500 text-gray-500 font-semibold text-base'>Press & media</a>
-                        <a href='' className='hover:text-blue-500 text-gray-500 font-semibold text-base'>Zerodh Cares (CSR)</a>
+                        <a href='https://zerodha.com/about/' className='hover:text-blue-500 text-gray-500 font-semibold text-base'>About</a>
+                        <a href='https://zerodha.com/products/' className='hover:text-blue-500 text-gray-500 font-semibold text-base'>Products</a>
+                        <a href='https://zerodha.com/charges/#tab-equities' className='hover:text-blue-500 text-gray-500 font-semibold text-base'>Pricing</a>
+                        <a href='https://zerodha.com/refer/' className='hover:text-blue-500 text-gray-500 font-semibold text-base'>Referral programme</a>
+                        <a href='https://careers.zerodha.com/' className='hover:text-blue-500 text-gray-500 font-semibold text-base'>Carrers</a>
+                        <a href='https://zerodha.tech/' className='hover:text-blue-500 text-gray-500 font-semibold text-base'>Zerodha.tech</a>
+                        <a href='https://zerodha.com/open-source/' className='hover:text-blue-500 text-gray-500 font-semibold text-base'>Open source</a>
+                        <a href='https://zerodha.com/media/' className='hover:text-blue-500 text-gray-500 font-semibold text-base'>Press & media</a>
+                        <a href='https://zerodha.com/cares/' className='hover:text-blue-500 text-gray-500 font-semibold text-base'>Zerodh Cares (CSR)</a>
                     </div>
                 </div>
 
@@ -208,15 +220,15 @@ const Main = () => {
                 <div className='flex flex-col space-y-2 mt-3'>
                     <h1 className='text-gray-800 font-semibold text-lg'>Support</h1>
                     <div className='flex flex-col hover:text-blue-500'>
-                        <a href='' className='text-gray-500 font-semibold text-base hover:text-blue-500'>Contact us</a>
-                        <a href='' className='text-gray-500 font-semibold text-base hover:text-blue-500'>Support portal</a>
-                        <a href='' className='text-gray-500 font-semibold text-base hover:text-blue-500'>Z-Connect blog</a>
-                        <a href='' className='text-gray-500 font-semibold text-base hover:text-blue-500'>List of charges</a>
-                        <a href='' className='text-gray-500 font-semibold text-base hover:text-blue-500'>Downloads & resources</a>
-                        <a href='' className='text-gray-500 font-semibold text-base hover:text-blue-500'>Videos</a>
-                        <a href='' className='text-gray-500 font-semibold text-base hover:text-blue-500'>Market overview</a>
-                        <a href='' className='text-gray-500 font-semibold text-base hover:text-blue-500'>How to file a complaint?</a>
-                        <a href='' className='text-gray-500 font-semibold text-base hover:text-blue-500'>Status of your complaints</a>
+                        <a href='https://zerodha.com/contact/' className='text-gray-500 font-semibold text-base hover:text-blue-500'>Contact us</a>
+                        <a href='https://support.zerodha.com/' className='text-gray-500 font-semibold text-base hover:text-blue-500'>Support portal</a>
+                        <a href='https://zerodha.com/z-connect/' className='text-gray-500 font-semibold text-base hover:text-blue-500'>Z-Connect blog</a>
+                        <a href='https://zerodha.com/charges/#tab-equities' className='text-gray-500 font-semibold text-base hover:text-blue-500'>List of charges</a>
+                        <a href='https://zerodha.com/resources/' className='text-gray-500 font-semibold text-base hover:text-blue-500'>Downloads & resources</a>
+                        <a href='https://zerodha.com/videos/' className='text-gray-500 font-semibold text-base hover:text-blue-500'>Videos</a>
+                        <a href='https://stocks.zerodha.com/' className='text-gray-500 font-semibold text-base hover:text-blue-500'>Market overview</a>
+                        <a href='https://support.zerodha.com/category/your-zerodha-account/your-profile/ticket-creation/articles/how-do-i-create-a-ticket-at-zerodha' className='text-gray-500 font-semibold text-base hover:text-blue-500'>How to file a complaint?</a>
+                        <a href='https://support.zerodha.com/category/your-zerodha-account/your-profile/ticket-creation/articles/track-complaints-or-tickets' className='text-gray-500 font-semibold text-base hover:text-blue-500'>Status of your complaints</a>
                     </div>
                 </div>
 
